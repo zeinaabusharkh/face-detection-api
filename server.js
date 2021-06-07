@@ -11,8 +11,7 @@ const profile = require('./controllers/profile');
  const db = knex = require('knex')({
 	client: 'pg',
 	connection: {
-	  host : 'postgresql-globular-18581',
-	  host :process.env.DATABASE_URL,
+	  connectionString:process.env.DATABASE_URL,
 	  ssl:true,
 	}
   });
