@@ -12,9 +12,8 @@ const profile = require('./controllers/profile');
 	client: 'pg',
 	connection: {
 	  host : 'postgresql-globular-18581',
-	  user : 'postgres',
-	  password : 'test',
-	  database : 'smartbrain'
+	  host :process.env.DATABASE_URL,
+	  ssl:true,
 	}
   });
 
